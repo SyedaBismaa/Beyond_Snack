@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav className="w-full shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         
-        <img className=" w-1/6 object-cover " src="Logo.png" alt="" />
+        <img className=" w-[5rem] object-cover " src="Logo.png" alt="" />
 
         <ul className="flex gap-9 font-medium">
           {/* 1. Home */}

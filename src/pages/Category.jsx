@@ -5,10 +5,10 @@ console.log(motion)
 
 const Category = () => {
       const categories = [
-        { img: "Hijabs.jpg", text: "Hijabs->" },
-        { img: "Abaya.jpg", text: "Abayas" },
-        { img: "Kurtis.jpg", text: "Kurtis" },
-        { img: "Dress.jpg", text: "Gray Elegance" },
+        { img: "Banana.png", text: "Hijabs->" },
+        { img: "Black.png", text: "Abayas" },
+        { img: "Masala.png", text: "Kurtis" },
+        { img: "Banana.png", text: "Gray Elegance" },
 
       ];
 
