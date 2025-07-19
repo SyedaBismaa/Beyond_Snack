@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import Category from "../pages/Category";
+
 const createDropVariant = (delay) => ({
   initial: { y: -50, opacity: 0 },
   animate: {
@@ -15,7 +16,21 @@ const createDropVariant = (delay) => ({
   },
 });
 console.log(motion)
+
 const Navbar = () => {
+  // Theme state: 'light' or 'dark'
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
+
+  // Apply theme to <body>
+  useEffect(() => {
+    document.body.classList.remove("light", "dark");
+    document.body.classList.add(theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  // Toggle theme handler
+  const toggleTheme = () => setTheme((prev) => (prev === "light" ? "dark" : "light"));
+
   return (
     <nav className="w-full shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -132,11 +147,20 @@ const Navbar = () => {
               Favs
             </motion.h3>
           </NavLink>
-
         </ul>
+
+        {/* Theme Toggle Button */}
+        <button
+          onClick={toggleTheme}
+          className="ml-6 px-4 py-2 rounded-full border border-gray-400 bg-white dark:bg-gray-800 dark:text-white transition"
+          aria-label="Toggle theme"
+        >
+          {theme === "light" ? "🌞 Light" : "🌙 Dark"}
+        </button>
       </div>
     </nav>
   );
 };
 
 export default Navbar;
+

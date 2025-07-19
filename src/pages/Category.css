@@ -1,6 +1,5 @@
-    .category-wrapper {
+.category-wrapper {
       height: 90vh;
-      background-color: #e5e7eb; /* bg-gray-200 */
       margin-top: 4rem; /* mt-16 */
       overflow: hidden;
       display: flex;
@@ -14,12 +13,13 @@
       display: flex;
       justify-content: center;
       padding-top: 2rem; /* pt-8 */
-      color: #1f2937; 
+      /* color: #1f2937;  */
     }
 
     .highlight {
       padding: 0 0.75rem; /* px-3 */
       font-weight: 900;
+      color: yellow;
     }
 
     .category-container {
@@ -75,25 +75,29 @@
 
     .category-text {
       position: absolute;
-      bottom: 1rem;
-      font-size: 1.25rem; 
-      font-weight: 600; 
-      color: white;
+      top: 50%;
+      left: 50%;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
       text-align: center;
       opacity: 0;
-      transform: translateY(20px);
+      transform: translate(-50%, -50%);
       transition: opacity 0.4s ease, transform 0.4s ease;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem; 
+      padding: 0;
+      border-radius: 0;
+      background: none !important;
+      box-shadow: none;
+      pointer-events: none;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
     }
 
     .category-item:hover .category-text {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate(-50%, -50%) scale(1.08);
     }
 
-    /* Color variants for each item */
-    .category-item:nth-child(1) .category-text { background-color: #8b5cf6; } /* purple-500 */
-    .category-item:nth-child(2) .category-text { background-color: #ec4899; } /* pink-500 */
-    .category-item:nth-child(3) .category-text { background-color: #3b82f6; } /* blue-500 */
-    .category-item:nth-child(4) .category-text { background-color: #6b7280; } /*
+    /* Remove color backgrounds for text on hover */
+    .category-item .category-text {
+      background: none !important;
+    }
