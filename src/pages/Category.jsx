@@ -1,7 +1,22 @@
-import React from 'react';
+// ...existing imports...
+import React, { useRef, useEffect } from 'react';
 import './Category.css'; 
-import { motion } from 'motion/react';
-console.log(motion)
+import { motion, useAnimation } from 'framer-motion';
+import Lenis from '@studio-freight/lenis';
+
+const chipPositions = [
+  { top: '5%', left: '10%' },
+  { top: '15%', left: '80%' },
+  { top: '60%', left: '5%' },
+  { top: '75%', left: '70%' },
+  { top: '40%', left: '45%' },
+];
+
+const chipVariants = {
+  initial: { opacity: 0, scale: 0.7, z: -200 },
+  visible: { opacity: 1, scale: 1, z: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  exit: { opacity: 0, scale: 0.7, z: 200, transition: { duration: 0.8, ease: "easeIn" } }
+};
 
 const Category = () => {
   const categories = [
@@ -12,8 +27,62 @@ const Category = () => {
     { img: "sauce-creame.webp", text: "Sauce" },
   ];
 
+  // Chip animation controls
+  const controlsArray = chipPositions.map(() => useAnimation());
+  const sectionRef = useRef(null);
+
+  // Lenis smooth scroll setup
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    return () => lenis.destroy();
+  }, []);
+
+  // Scroll-based chip animation
+  useEffect(() => {
+    function handleScroll() {
+      if (!sectionRef.current) return;
+      const rect = sectionRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      const sectionTop = rect.top;
+      const sectionBottom = rect.bottom;
+
+      let progress = 1 - Math.max(0, Math.min(1, sectionTop / windowHeight));
+      if (sectionBottom < 0 || sectionTop > windowHeight) progress = 0;
+
+      controlsArray.forEach((controls, i) => {
+        if (progress > 0.15 && progress < 0.85) {
+          controls.start("visible");
+        } else {
+          controls.start("exit");
+        }
+      });
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [controlsArray]);
+
   return (
-    <div className="category-wrapper">
+    <div ref={sectionRef} className="category-wrapper relative ">
+      {/* Chip Images with scroll-based animation */}
+      {chipPositions.map((pos, i) => (
+        <motion.img
+          key={i}
+          src="Chip.png"
+          alt=""
+          className="absolute w-[10rem] z-[1] pointer-events-none"
+          style={{ top: pos.top, left: pos.left }}
+          variants={chipVariants}
+          initial="initial"
+          animate={controlsArray[i]}
+        />
+      ))}
+
       <h1 className="category-heading">
         View Our <span className="highlight">Best</span> Sellers
       </h1>

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import Category from "../pages/Category";
+import { ThemeContext } from "../main"; // adjust path if needed
 
 const createDropVariant = (delay) => ({
   initial: { y: -50, opacity: 0 },
@@ -15,21 +15,9 @@ const createDropVariant = (delay) => ({
     },
   },
 });
-console.log(motion)
 
 const Navbar = () => {
-  // Theme state: 'light' or 'dark'
-  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
-
-  // Apply theme to <body>
-  useEffect(() => {
-    document.body.classList.remove("light", "dark");
-    document.body.classList.add(theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  // Toggle theme handler
-  const toggleTheme = () => setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <nav className="w-full shadow-md">

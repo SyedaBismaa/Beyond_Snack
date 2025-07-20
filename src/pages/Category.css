@@ -1,6 +1,6 @@
 .category-wrapper {
       height: 90vh;
-      margin-top: 4rem; /* mt-16 */
+      margin-top: 7rem; /* mt-16 */
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -9,11 +9,11 @@
 
     .category-heading {
       font-size: 2.25rem; /* text-4xl */
-      font-weight: 800; /* font-extrabold */
+      font-weight: 500; /* font-extrabold */
       display: flex;
       justify-content: center;
       padding-top: 2rem; /* pt-8 */
-      /* color: #1f2937;  */
+
     }
 
     .highlight {
