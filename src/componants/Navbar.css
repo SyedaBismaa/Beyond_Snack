@@ -1,0 +1,47 @@
+
+
+@layer components {
+  .nav-container {
+    @apply w-full shadow-md rounded-full bg-white dark:bg-gray-900;
+  }
+
+  .nav-content {
+    @apply max-w-7xl mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8;
+  }
+
+  .hamburger-button {
+    @apply sm:hidden text-gray-800 dark:text-white focus:outline-none;
+  }
+
+  .hamburger-icon {
+    @apply w-6 h-6;
+  }
+
+  .nav-link {
+    @apply text-gray-800 dark:text-white hover:text-pink-400 transition;
+  }
+
+  .nav-link-active {
+    @apply text-pink-400 underline;
+  }
+
+  .nav-link-text {
+    @apply text-xl font-medium;
+  }
+
+  .mobile-nav-link-text {
+    @apply text-lg text-center font-medium;
+  }
+
+  .mobile-menu {
+    @apply sm:hidden absolute top-16 left-0 w-full bg-white dark:bg-gray-900 shadow-md rounded-b-lg overflow-hidden;
+  }
+
+  .mobile-menu-list {
+    @apply flex flex-col gap-4 p-4;
+  }
+
+  .theme-button {
+    @apply ml-6 px-4 py-2 rounded-full border border-gray-400 bg-white dark:bg-gray-800 dark:text-white transition;
+  }
+}

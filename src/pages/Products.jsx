@@ -7,10 +7,10 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './Products.css';
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation } from 'motion/react';
 
 const products = [
-    {
+  {
     id: 3,
     name: "Banana Chips Green",
     price: "₹109",
@@ -24,7 +24,7 @@ const products = [
     img: "Banana.png",
     desc: "Crispy, lightly salted banana chips. Perfect for snacking!",
   },
-    {
+  {
     id: 3,
     name: "Banana Chips Green",
     price: "₹109",
@@ -49,21 +49,16 @@ const products = [
 
 
 const fallingImages = [
-  { src: "green-leaf.png", top: "10%", left: "8%" },
-  { src: "Chili-flex.png", top: "20%", left: "80%" },
-  { src: "Chili-flex.png", top: "60%", left: "5%" },
+  { src: "green-leaf.png", top: "20%", left: "80%" },
+  { src: "green-leaf.png", top: "60%", left: "5%" },
   { src: "green-leaf2.png", top: "75%", left: "70%" },
-  { src: "masala-splash.png", top: "40%", left: "45%" },
-  { src: "Chili-flex.png", top: "85%", left: "20%" },
-  { src: "Chip.png", top: "15%", left: "30%" },
-  { src: "Chip.png", top: "55%", left: "60%" },
-  { src: "Chip.png", top: "80%", left: "50%" },
-  { src: "green-leaf.png", top: "30%", left: "60%" },
-  { src: "masala-splash.png", top: "70%", left: "15%" },
-  { src: "masala-splash.png", top: "35%", left: "75%" },
-  { src: "Chip.png", top: "60%", left: "85%" },
+  { src: "green-leaf2.png", top: "85%", left: "20%" },
+  { src: "green-leaf.png", top: "40%", left: "35%" },
+  { src: "green-leaf", top: "55%", left: "60%" },
+  { src: "green-leaf.png", top: "80%", left: "50%" },
+  { src: "green-leaf2.png", top: "30%", left: "60%" },
+  { src: "green-leaf2.png", top: "60%", left: "85%" },
   { src: "green-leaf2.png", top: "25%", left: "15%" },
-  { src: "masala-splash.png", top: "50%", left: "35%" },
 ];
 
 const fallingVariants = {
@@ -131,7 +126,7 @@ const Products = () => {
         />
       ))}
 
-      <h1 className="products-title text-5xl mb-[1.5rem] font-medium "> Check Out All The Flavoure</h1>
+      <h1 className="products-title text-5xl mb-[1.5rem] font-medium "> Check Out All The <span className='text-red-400'>Flavoure</span></h1>
       <p className='mb-10 text-xl  '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, esse accusantium? Iure incidunt .</p>
       <Swiper
         effect="coverflow"
