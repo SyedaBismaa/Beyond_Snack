@@ -3,6 +3,8 @@ import About from "./pages/About"
 import Category from "./pages/Category"
 import Home from "./pages/Home"
 import Products from "./pages/Products"
+import Process from "./pages/process"
+
 
 function App() {
 
@@ -13,6 +15,7 @@ function App() {
     <Category/>
     <Products/>
     <About/>
+    <Process/>
   </div>
   )
 }

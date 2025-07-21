@@ -1,5 +1,4 @@
-/* Products.css */
-/* Add or update in Products.css */
+
 .falling-img {
   pointer-events: none;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.12));
@@ -37,6 +36,8 @@
   min-height: 380px;      
   height: 420px;
   margin-top: 2rem;
+  border-radius: 1rem;
+
 }
 
 .product-slide {
@@ -53,6 +54,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+
 }
 .dark .product-slide {
   background: #18181b;

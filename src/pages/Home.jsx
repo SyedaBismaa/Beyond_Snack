@@ -66,18 +66,25 @@ const Home = () => {
         </button>
       </div>
 
-      <div className={`Hero-img h-[60%] w-[25%] ${bgColors[imgIndex]} rounded-full flex items-center justify-center overflow-visible relative`}>
-        <div className="absolute z-10 border-3 border-green-00 rounded-full h-[110%] w-[110%] pointer-events-none"></div>
+      <div className={`Hero-img h-[60%] w-[25%] ${bgColors[imgIndex]} rounded-full flex items-center justify-center overflow-visible relative transition-colors duration-500`}>
+        <div className="absolute z-10 border-3 border-green-00 rounded-full h-[105%] w-[105%] pointer-events-none"></div>
         <motion.img
           key={imgIndex}
           src={images[imgIndex]}
           alt=""
-          className="h-[130%] w-[130%] object-cover rounded-full z-20"
-          animate={{ rotate: [0, 360] }}
+          className="h-[140%] w-[140%] object-cover rounded-full z-20"
+          animate={{ rotate: [-40, 40], scale: [1.20, 1] }}
           transition={{ repeat: Infinity, duration: ROTATION_DURATION, ease: "linear" }}
           whileHover={{ scale: 1.19 }}
           style={{ top: '-40%', left: '-40%' }}
         />
+
+        {/* <video className='h-[140%] w-[140%] rounded-full' src="Bowl-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        ></video> */}
       </div>
 
       <div className="texts z-10 ">
