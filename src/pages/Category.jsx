@@ -4,6 +4,8 @@ import './Category.css';
 import { motion, useAnimation } from 'framer-motion';
 import Lenis from '@studio-freight/lenis';
 
+console.log(motion)
+
 const chipPositions = [
   { top: '5%', left: '10%' },
   { top: '15%', left: '80%' },
@@ -20,11 +22,11 @@ const chipVariants = {
 
 const Category = () => {
   const categories = [
-    { img: "salt-black-bg.webp", text: "Salt-Black-Paper" },
-    { img: "peri-peri-bg.png", text:"Peri-Peri" },
-    { img: "Desi-masala-bg.webp", text: "Masala" },
-    { img: "Original-style-bg.webp", text: "Original" },
-    { img: "sauce-creame.webp", text: "Sauce" },
+    { img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/salt-black-bg.webp?updatedAt=1753158660682", text: "Salt-Black-Paper" },
+    { img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/peri-peri-bg.png?updatedAt=1753158662697", text:"Peri-Peri" },
+    { img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Desi-masala-bg.webp?updatedAt=1753158244383", text: "Masala" },
+    { img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Original-style-bg.webp?updatedAt=1753158661005", text: "Original" },
+    { img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/sauce-creame.webp?updatedAt=1753158660754", text: "Sauce" },
   ];
 
   // Chip animation controls

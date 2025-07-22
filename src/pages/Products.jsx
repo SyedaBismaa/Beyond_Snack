@@ -9,56 +9,59 @@ import 'swiper/css/navigation';
 import './Products.css';
 import { motion, useAnimation } from 'motion/react';
 
+console.log(motion)
+
 const products = [
-  {
-    id: 3,
-    name: "Banana Chips Green",
-    price: "₹109",
-    img: "Banana.png",
-    desc: "Fresh green banana chips with a unique flavor.",
-  },
-  {
+    {
     id: 1,
-    name: "Banana Chips Classic",
+    name: "Original style",
     price: "₹99",
-    img: "Banana.png",
+    img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Original-style.png?updatedAt=1753158661362",
     desc: "Crispy, lightly salted banana chips. Perfect for snacking!",
   },
   {
-    id: 3,
-    name: "Banana Chips Green",
+    id: 2,
+    name: "Sour Cream Onion & Parsly",
     price: "₹109",
-    img: "Banana.png",
+    img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Banana.png?updatedAt=1753158240081",
     desc: "Fresh green banana chips with a unique flavor.",
   },
+
   {
-    id: 2,
-    name: "Masala Banana Chips",
+    id: 3,
+    name: "Banana Chips In Coconut Oil",
+    price: "₹109",
+    img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Coconut.png?updatedAt=1753158242024",
+    desc: "Fresh banana chips in coconut oil with tweky flavour.",
+  },
+  {
+    id: 4,
+    name: "Desi Masala",
     price: "₹119",
-    img: "Masala.png",
+    img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Desi-Masala.png?updatedAt=1753158243092",
     desc: "Spicy and tangy banana chips with a masala twist.",
   },
   {
-    id: 3,
-    name: "Banana Chips Green",
+    id: 5,
+    name: "salt and Black paper",
     price: "₹109",
-    img: "Banana.png",
+    img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Black.png?updatedAt=1753158240885",
     desc: "Fresh green banana chips with a unique flavor.",
   },
 ];
 
 
 const fallingImages = [
-  { src: "green-leaf.png", top: "20%", left: "80%" },
-  { src: "green-leaf.png", top: "60%", left: "5%" },
-  { src: "green-leaf2.png", top: "75%", left: "70%" },
-  { src: "green-leaf2.png", top: "85%", left: "20%" },
-  { src: "green-leaf.png", top: "40%", left: "35%" },
-  { src: "green-leaf", top: "55%", left: "60%" },
-  { src: "green-leaf.png", top: "80%", left: "50%" },
-  { src: "green-leaf2.png", top: "30%", left: "60%" },
-  { src: "green-leaf2.png", top: "60%", left: "85%" },
-  { src: "green-leaf2.png", top: "25%", left: "15%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf.png?updatedAt=1753158243956", top: "20%", left: "80%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf.png?updatedAt=1753158243956", top: "60%", left: "5%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf2.png?updatedAt=1753158244198", top: "75%", left: "70%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf2.png?updatedAt=1753158244198", top: "85%", left: "20%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf.png?updatedAt=1753158243956", top: "40%", left: "35%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf.png?updatedAt=1753158243956", top: "55%", left: "60%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf.png?updatedAt=1753158243956.png", top: "80%", left: "50%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf2.png?updatedAt=1753158244198", top: "30%", left: "60%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf2.png?updatedAt=1753158244198", top: "60%", left: "85%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf2.png?updatedAt=1753158244198", top: "25%", left: "15%" },
 ];
 
 const fallingVariants = {

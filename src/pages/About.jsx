@@ -11,11 +11,11 @@ const About = () => {
   const textRef = useRef(null);
 
   const [typedText, setTypedText] = useState("");
-  const fullText = `In 2020, three friends—Manas Madhu, Jyoti Rajguru, and Gautam Raghuraman—set out to give banana chips the spotlight they truly deserve. 🍌✨
-
-Our golden Nendran bananas are sourced from the sun-kissed farms of Kerala and processed with zero human contact—ensuring hygiene and top quality.
-
-At Beyond Snack, we’re on a mission to replace boring snacks with crunchy, flavor-packed banana chips. From classic salted to spicy masala, each chip is crafted with care to deliver the ultimate snacking joy. 🏆`;
+  const fullText = `In 2020, three friends—Manas Madhu, Jyoti Rajguru, and Gautam Raghuraman—set out to give banana chips the spotlight they truly deserve. 🍌✨ 
+  
+  Our golden Nendran bananas are sourced from the sun-kissed farms of Kerala and processed with zero human contact—ensuring hygiene and top quality.
+  
+  At Beyond Snack, we’re on a mission to replace boring snacks with crunchy, flavor-packed banana chips. From classic salted to spicy masala, each chip is crafted with care to deliver the ultimate snacking joy. 🏆`;
 
   // Lenis smooth scroll setup
   useEffect(() => {
@@ -61,19 +61,19 @@ At Beyond Snack, we’re on a mission to replace boring snacks with crunchy, fla
   }, []);
 
   const images = [
-    { src: "Black.png", top: "18%", left: "13%" },
-    { src: "Peri-peri.png", top: "40%", left: "23%" },
-    { src: "Masala.png", top: "62%", left: "10%" },
-    
+    { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Black.png?updatedAt=1753158240885", top: "18%", left: "13%" },
+    { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Peri-peri.png?updatedAt=1753158662760", top: "40%", left: "23%" },
+    { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Desi-Masala.png?updatedAt=1753158243092", top: "62%", left: "10%" },
 
-    { src: "chips-plate.png", top: "77%",left:"40%" },
-    { src: "chips-plate.png", top: "27%",left:"85%" },
+
+    { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/chips-plate.png?updatedAt=1753158241180", top: "77%", left: "40%" },
+    { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/chips-plate.png?updatedAt=1753158241180", top: "27%", left: "85%" },
   ];
 
   return (
     <section className="about-section min-h-[90%] px-4 sm:px-8 lg:px-16 py-12 flex items-center">
       <div className="about-wrapper max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 relative">
-        
+
         <div className=" about-globe relative w-full md:w-[500px] h-[300px] md:h-[500px] z-10">
           {/* Globe Canvas */}
           <div className="absolute inset-0 z-10">
@@ -102,25 +102,25 @@ At Beyond Snack, we’re on a mission to replace boring snacks with crunchy, fla
           </p>
         </motion.div>
 
-                  {/* Floating Images */}
-          <motion.div className=" about-imgs absolute inset-0 pointer-events-none z-20">
-            {images.map((img, i) => (
-              <motion.img
-                key={i}
-                src={img.src}
-                alt={`Floating ${i}`}
-                className="absolute h-full w-full md:h-[5rem] md:w-[5rem] rounded-full object-cover shadow-xl"
-                style={{ top: img.top, left: img.left }}
-                animate={{ y: [0, -20, 0] }}
-                transition={{
-                  duration: 3 + i,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: i * 0.4,
-                }}
-              />
-            ))}
-          </motion.div>
+        {/* Floating Images */}
+        <motion.div className=" about-imgs absolute inset-0 pointer-events-none z-20">
+          {images.map((img, i) => (
+            <motion.img
+              key={i}
+              src={img.src}
+              alt={`Floating ${i}`}
+              className="absolute h-full w-full md:h-[5rem] md:w-[5rem] rounded-full object-cover shadow-xl"
+              style={{ top: img.top, left: img.left }}
+              animate={{ y: [0, -20, 0] }}
+              transition={{
+                duration: 3 + i,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: i * 0.4,
+              }}
+            />
+          ))}
+        </motion.div>
       </div>
     </section>
   );

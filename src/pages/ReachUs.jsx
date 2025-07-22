@@ -1,10 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// Dynamically import images
-import banana from "/public/Banana.png";
-
-const logos = [banana, banana, banana, banana, banana];
+// Array of image paths
+const logos = [
+  "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Logo.png?updatedAt=1753161411688",
+  "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Amazon.webp?updatedAt=1753162389585",
+  "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Zepto.png?updatedAt=1753161411522",
+  "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/BB.webp?updatedAt=1753162254134",
+  "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/JioMart.png?updatedAt=1753161410354",
+  "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Flipkart.png?updatedAt=1753161407791",
+  "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Instamart.png?updatedAt=1753161407086",
+  "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/BB.webp?updatedAt=1753162254134",
+  "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Zepto.png?updatedAt=1753161411522",
+];
 
 const MarqueeRow = ({ direction = "left" }) => {
   const baseAnimation = {
@@ -22,17 +30,16 @@ const MarqueeRow = ({ direction = "left" }) => {
   };
 
   return (
-   
     <motion.div
       {...baseAnimation}
-      className="flex gap-10 min-w-full absolute"
+      className="flex gap-8 sm:gap-10 md:gap-12 lg:gap-10 min-w-full absolute"
     >
       {[...logos, ...logos].map((logo, i) => (
         <img
           key={i}
           src={logo}
           alt={`logo-${i}`}
-          className="h-16 w-auto object-contain"
+          className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
         />
       ))}
     </motion.div>
@@ -41,17 +48,17 @@ const MarqueeRow = ({ direction = "left" }) => {
 
 const ReachUs = () => {
   return (
-    <div className="h-[200px] w-full relative overflow-hidden px-4 py-6">
-        <h1 className="flex justify-center text-3xl pb-5">Catch us here</h1>
-      <div className="absolute top-1/4 w-full">
+    <div className="relative w-full h-[220px] sm:h-[280px] md:h-[320px] overflow-hidden px-6 sm:px-8 md:px-10 py-8 sm:py-10 mt-10">
+      <h1 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-[3rem] sm:mb-[4rem] md:mb-[5rem]">
+        CATCH US ON
+      </h1>
+      <div className="absolute top-[90%] sm:top-[35%] md:top-[33%] w-full">
         <MarqueeRow direction="left" />
       </div>
-
-      <div className="absolute bottom-1/4 w-full">
+      <div className="absolute bottom-[38%] sm:bottom-[33%] md:bottom-[31%] w-full">
         <MarqueeRow direction="right" />
       </div>
     </div>
-    
   );
 };
 

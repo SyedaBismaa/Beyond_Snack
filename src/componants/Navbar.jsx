@@ -58,7 +58,7 @@ const Navbar = () => {
         </button>
 
         {/* Nav Links (Desktop) */}
-        <ul className="hidden sm:flex sm:gap-9">
+        <ul className="hidden sm:flex sm:gap-9 text-xl font-medium">
           <NavLink
             to="/"
             className={({ isActive }) =>
