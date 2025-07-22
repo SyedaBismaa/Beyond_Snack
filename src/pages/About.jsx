@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import Globe from "../componants/Globe";
 import { motion } from "framer-motion";
-import "./about.css";
+import "./About.css";
 
 console.log(motion)
 
