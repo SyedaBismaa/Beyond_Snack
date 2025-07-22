@@ -5,7 +5,7 @@ import Category from "./pages/Category"
 import Home from "./pages/Home"
 import Products from "./pages/Products"
 import ReachUs from "./pages/ReachUs"
-import Process from "./pages/process"
+import Process from "./pages/Process"
 
 
 function App() {
