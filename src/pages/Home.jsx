@@ -1,13 +1,28 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import Lenis from '@studio-freight/lenis';
 import './Home.css';
 
+const images = [
+  'https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Black.png',
+  'https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Banana.png',
+  'https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Masala.png',
+  'https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Black.png',
+];
 
-console.log(motion)
+const bgColors = [
+  "bg-transparent",
+  "bg-transparent",
+  "bg-transparent",
+  "bg-transparent",
+
+];
+
+const ROTATION_DURATION = 4; 
 
 const Home = () => {
   const sectionRef = useRef(null);
+  const [imgIndex, setImgIndex] = useState(0);
 
   // Smooth scrolling setup using Lenis
   useEffect(() => {
@@ -18,6 +33,14 @@ const Home = () => {
     }
     requestAnimationFrame(raf);
     return () => lenis.destroy();
+  }, []);
+
+  // Auto rotate image
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImgIndex((prev) => (prev + 1) % images.length);
+    }, ROTATION_DURATION * 1000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -44,19 +67,34 @@ const Home = () => {
         </button>
       </div>
 
-      {/* Center Bowl Video */}
-      <div className="Hero-img">
-        <video
-          className='rounded-full'
-          src="https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Bowl-video.mp4?updatedAt=1753170613043"
-          autoPlay
-          loop
-          muted
-          playsInline
+
+ 
+      <div className={`Hero-img h-74 w-74 m-10 p-5 ${bgColors[imgIndex]} border-1 shadow-[0_0_20px_rgba(34,197,94,0.6)]"></ rounded-full flex items-center justify-center overflow-visible relative`}>
+
+        <div className="absolute z-10 border-2 border-gray-500 rounded-full h-[108%] w-[108%] shadow-[0_0_20px_rgba(34,197,94,0.6)]"></div>
+
+        <motion.img
+          key={imgIndex}
+          src={images[imgIndex]}
+          alt="Banana Chips"
+          className="h-[113%] w-[113%] object-cover rounded-full z-20"
+          animate={{
+            rotate: [-15, 15, -15],
+            scale: [1.12, 1.19, 1.12],
+            y: [-10, 0, -10],
+          }}
+          transition={{
+            rotate: { repeat: Infinity, duration: 5, ease: 'easeInOut' },
+            scale: { repeat: Infinity, duration: 4, ease: 'easeInOut' },
+            y: { repeat: Infinity, duration: 6, ease: 'easeInOut' },
+          }}
+          whileHover={{ scale: 1.25 }}
+          style={{ transformOrigin: 'center', marginTop: '-2%' }}
         />
       </div>
 
-      {/* Right Feature Texts */}
+
+
       <div className="texts z-10 max-w-xs">
         {[
           {

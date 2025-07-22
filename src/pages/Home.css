@@ -1,32 +1,4 @@
-/* Hero image and video styles */
-.Hero-img {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 9999px;
-  overflow: visible;
-}
 
-.Hero-img video {
-  height: 70%;
-  width: 70%;
-  border-radius: 9999px;
-}
-
-.Hero-img::before {
-  content: "";
-  position: absolute;
-  z-index: 10;
-  height:105%;
-  width: 75%;
-  border: 0.1875rem solid rgba(12, 151, 46, 0.733);
-  border-radius: 9999px;
-  pointer-events: none;
-}
-
-
-/* Text section styles */
 .texts {
   display: flex;
   flex-direction: column;

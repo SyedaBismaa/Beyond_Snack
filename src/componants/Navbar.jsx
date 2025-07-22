@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ThemeContext } from "../main"; // adjust path if needed
 
-
 console.log(motion);
 
 const createDropVariant = (delay) => ({
@@ -60,10 +59,11 @@ const Navbar = () => {
         {/* Nav Links (Desktop) */}
         <ul className="hidden sm:flex sm:gap-9 text-xl font-medium">
           <NavLink
-            to="/"
+            to="/Home"
             className={({ isActive }) =>
               isActive ? "nav-link-active" : "nav-link"
             }
+            onClick={() => setIsMenuOpen(false)}
           >
             <motion.h3
               variants={createDropVariant(0)}
@@ -81,10 +81,11 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
-            to="/category"
+            to="/Category"
             className={({ isActive }) =>
               isActive ? "nav-link-active" : "nav-link"
             }
+            onClick={() => setIsMenuOpen(false)}
           >
             <motion.h3
               variants={createDropVariant(0.3)}
@@ -106,6 +107,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? "nav-link-active" : "nav-link"
             }
+            onClick={() => setIsMenuOpen(false)}
           >
             <motion.h3
               variants={createDropVariant(0.6)}
@@ -127,6 +129,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? "nav-link-active" : "nav-link"
             }
+            onClick={() => setIsMenuOpen(false)}
           >
             <motion.h3
               variants={createDropVariant(0.9)}
@@ -134,7 +137,7 @@ const Navbar = () => {
               animate="animate"
               whileHover={{
                 scale: 1.1,
-                borderBottom: "2px solid #F472B6",
+                borderBottom: "2px solid #19d639ff",
                 transition: { duration: 0.3 },
               }}
               className="nav-link-text"
@@ -148,6 +151,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? "nav-link-active" : "nav-link"
             }
+            onClick={() => setIsMenuOpen(false)}
           >
             <motion.h3
               variants={createDropVariant(1.2)}
@@ -178,7 +182,7 @@ const Navbar = () => {
         >
           <ul className="flex flex-col gap-4 p-4">
             <NavLink
-              to="/"
+              to="/Home"
               className={({ isActive }) =>
                 isActive ? "nav-link-active" : "nav-link"
               }
@@ -195,7 +199,7 @@ const Navbar = () => {
             </NavLink>
 
             <NavLink
-              to="/category"
+              to="/Category"
               className={({ isActive }) =>
                 isActive ? "nav-link-active" : "nav-link"
               }

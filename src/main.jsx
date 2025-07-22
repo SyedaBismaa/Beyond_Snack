@@ -1,13 +1,12 @@
-import React, { useState, useEffect, createContext,  } from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { BrowserRouter } from 'react-router-dom'
+import React, { useState, useEffect, createContext } from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 
-// Create ThemeContext
+// Theme context
 export const ThemeContext = createContext();
 
-// ThemeProvider component
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
 
@@ -17,8 +16,7 @@ export const ThemeProvider = ({ children }) => {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  // Optional: Provide a toggle function
-  const toggleTheme = () => setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  const toggleTheme = () => setTheme(prev => (prev === "light" ? "dark" : "light"));
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>
@@ -29,7 +27,6 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-// Usage: Wrap your app with ThemeProvider
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
@@ -37,5 +34,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <App />
       </ThemeProvider>
     </BrowserRouter>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
