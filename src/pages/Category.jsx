@@ -75,7 +75,7 @@ const Category = () => {
       {chipPositions.map((pos, i) => (
         <motion.img
           key={i}
-          src="Chip.png"
+          src="https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Chip.png?updatedAt=1753170610263"
           alt=""
           className="absolute w-[10rem] z-[1] pointer-events-none"
           style={{ top: pos.top, left: pos.left }}

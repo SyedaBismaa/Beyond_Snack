@@ -1,3 +1,4 @@
+import Footer from "./componants/Footer"
 import Navbar from "./componants/Navbar"
 import About from "./pages/About"
 import Category from "./pages/Category"
@@ -18,6 +19,7 @@ function App() {
      <Process/>
     <About/>
     <ReachUs/>
+    <Footer/>
   </div>
   )
 }

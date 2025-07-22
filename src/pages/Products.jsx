@@ -12,7 +12,7 @@ import { motion, useAnimation } from 'motion/react';
 console.log(motion)
 
 const products = [
-    {
+  {
     id: 1,
     name: "Original style",
     price: "₹99",
@@ -52,16 +52,16 @@ const products = [
 
 
 const fallingImages = [
-  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf.png?updatedAt=1753158243956", top: "20%", left: "80%" },
-  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf.png?updatedAt=1753158243956", top: "60%", left: "5%" },
-  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf2.png?updatedAt=1753158244198", top: "75%", left: "70%" },
-  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf2.png?updatedAt=1753158244198", top: "85%", left: "20%" },
-  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf.png?updatedAt=1753158243956", top: "40%", left: "35%" },
-  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf.png?updatedAt=1753158243956", top: "55%", left: "60%" },
-  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf.png?updatedAt=1753158243956.png", top: "80%", left: "50%" },
-  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf2.png?updatedAt=1753158244198", top: "30%", left: "60%" },
-  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf2.png?updatedAt=1753158244198", top: "60%", left: "85%" },
-  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf2.png?updatedAt=1753158244198", top: "25%", left: "15%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Onion.png?updatedAt=1753170613302", top: "20%", left: "80%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/bananan.png?updatedAt=1753170608612", top: "60%", left: "5%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/coconut.png?updatedAt=1753170610787", top: "75%", left: "70%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Onion.png?updatedAt=1753170613302", top: "85%", left: "20%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Black-paper.png?updatedAt=1753170610741", top: "40%", left: "35%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/garlic.png?updatedAt=1753170610850", top: "55%", left: "60%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/chiliii.png?updatedAt=1753170609564", top: "80%", left: "50%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/green-leaf2.png?updatedAt=1753158244198", top: "30%", left: "69%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/coconut.png?updatedAt=1753170610787", top: "60%", left: "89%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/chiliii.png?updatedAt=1753170609564", top: "25%", left: "15%" },
 ];
 
 const fallingVariants = {
@@ -130,7 +130,7 @@ const Products = () => {
       ))}
 
       <h1 className="products-title text-5xl mb-[1.5rem] font-medium "> Check Out All The <span className='text-red-400'>Flavoure</span></h1>
-      <p className='mb-10 text-xl  '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, esse accusantium? Iure incidunt .</p>
+      <p className='mb-10 text-xl  '> Discover bold, tasty, and irresistibly crunchy banana chips that pack a punch in every bite. Made to snack, made to share..</p>
       <Swiper
         effect="coverflow"
         grabCursor={true}

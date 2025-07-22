@@ -34,7 +34,7 @@ const Process = () => {
 
   return (
     <section className="py-16 px-4 mt-6 text-center relative z-10 overflow-hidden">
-      {/* Heading Animation */}
+
       <motion.h2
         className="text-2xl sm:text-3xl font-semibold mb-10 relative z-50"
         animate={{

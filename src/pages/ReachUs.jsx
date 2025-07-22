@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// Array of image paths
+//  image paths
 const logos = [
   "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Logo.png?updatedAt=1753161411688",
   "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Amazon.webp?updatedAt=1753162389585",
@@ -49,8 +49,8 @@ const MarqueeRow = ({ direction = "left" }) => {
 const ReachUs = () => {
   return (
     <div className="relative w-full h-[220px] sm:h-[280px] md:h-[320px] overflow-hidden px-6 sm:px-8 md:px-10 py-8 sm:py-10 mt-10">
-      <h1 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-[3rem] sm:mb-[4rem] md:mb-[5rem]">
-        CATCH US ON
+      <h1 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-[3rem] sm:mb-[3rem] md:mb-[5rem] text-green-900">
+        CATCH <span className="text-yellow-500">US</span> HERE
       </h1>
       <div className="absolute top-[90%] sm:top-[35%] md:top-[33%] w-full">
         <MarqueeRow direction="left" />

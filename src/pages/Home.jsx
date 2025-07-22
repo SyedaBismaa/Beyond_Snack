@@ -48,7 +48,7 @@ const Home = () => {
       <div className="Hero-img">
         <video
           className='rounded-full'
-          src="Bowl-video.mp4"
+          src="https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Bowl-video.mp4?updatedAt=1753170613043"
           autoPlay
           loop
           muted
