@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+console.log(motion)
 //  image paths
 const logos = [
   "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Logo.png?updatedAt=1753161411688",

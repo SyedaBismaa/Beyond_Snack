@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
+console.log(motion);
 
 const icons = [
   {

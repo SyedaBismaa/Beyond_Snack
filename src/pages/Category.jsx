@@ -85,8 +85,21 @@ const Category = () => {
         />
       ))}
 
-      <h1 className="category-heading">
-        View Our <span className="highlight">Best</span> Sellers
+      <h1
+      
+        className="text-center text-4xl sm:text-5xl md:text-6xl font-[Helvetica] font-medium tracking-tight"
+      >
+        View Our <motion.span
+  className="text-green-500 inline-block"
+  animate={{ x: [0, 16, 0] }} // 1rem = 16px
+  transition={{
+    duration: 1.5,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+>
+  BEST
+</motion.span> Sellers
       </h1>
       <motion.div
         className="category-container"

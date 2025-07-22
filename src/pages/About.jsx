@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Lenis from "@studio-freight/lenis";
-import Globe from "../componants/Globe"; // adjust path as needed
+import Globe from "../componants/Globe"; 
 import { motion } from "framer-motion";
-import "./about.css"; // optional
+import "./about.css"; 
 
 console.log(motion)
 
@@ -17,7 +17,7 @@ const About = () => {
   
   At Beyond Snack, we’re on a mission to replace boring snacks with crunchy, flavor-packed banana chips. From classic salted to spicy masala, each chip is crafted with care to deliver the ultimate snacking joy. 🏆`;
 
-  // Lenis smooth scroll setup
+
   useEffect(() => {
     const lenis = new Lenis({ smooth: true });
 
@@ -37,7 +37,6 @@ const About = () => {
     return () => lenis.destroy();
   }, []);
 
-  // Typing animation when paragraph comes into view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -47,7 +46,7 @@ const About = () => {
             setTypedText(fullText.slice(0, i));
             i++;
             if (i > fullText.length) clearInterval(interval);
-          }, 30);
+          }, 20);
         }
       },
       { threshold: 0.3 }
@@ -61,11 +60,9 @@ const About = () => {
   }, []);
 
   const images = [
-    { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Black.png?updatedAt=1753158240885", top: "18%", left: "13%" },
-    { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Peri-peri.png?updatedAt=1753158662760", top: "40%", left: "23%" },
+    { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Black.png?updatedAt=1753158240885", top: "18%", left: "10%" },
+    { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Peri-peri.png?updatedAt=1753158662760", top: "40%", left: "17%" },
     { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Desi-Masala.png?updatedAt=1753158243092", top: "62%", left: "10%" },
-
-
     { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/chips-plate.png?updatedAt=1753158241180", top: "77%", left: "40%" },
     { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/chips-plate.png?updatedAt=1753158241180", top: "27%", left: "85%" },
   ];
@@ -79,24 +76,21 @@ const About = () => {
           <div className="absolute inset-0 z-10">
             <Globe rotationRef={globeRef} />
           </div>
-
-
         </div>
 
-        {/* Text Section */}
         <motion.div
-          className="about-text max-w-3xl z-20 relative text-center md:text-left"
+          className="about-text min-w-3xl max-w-3xl z-20 relative text-center md:text-left md:ml-12 lg:ml-20 xl:ml-28 "
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            About <span className="text-green-500">Beyond</span> Snack
+          <h2 className=" about-h1 text-3xl md:text-4xl font-bold mb-6 font-Helvatica">
+            About<span className="text-green-500">Beyond</span> Snack
           </h2>
           <p
             ref={textRef}
-            className="text-base leading-relaxed text-justify whitespace-pre-wrap"
+            className=" about-p text-base leading-relaxed text-justify whitespace-pre-wrap"
           >
             {typedText}
           </p>
