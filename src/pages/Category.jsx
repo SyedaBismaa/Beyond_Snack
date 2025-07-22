@@ -1,6 +1,6 @@
 // ...existing imports...
 import React, { useRef, useEffect } from 'react';
-import './Category.css'; 
+import './Category.css';
 import { motion, useAnimation } from 'framer-motion';
 import Lenis from '@studio-freight/lenis';
 
@@ -23,7 +23,7 @@ const chipVariants = {
 const Category = () => {
   const categories = [
     { img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/salt-black-bg.webp?updatedAt=1753158660682", text: "Salt-Black-Paper" },
-    { img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/peri-peri-bg.png?updatedAt=1753158662697", text:"Peri-Peri" },
+    { img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/peri-peri-bg.png?updatedAt=1753158662697", text: "Peri-Peri" },
     { img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Desi-masala-bg.webp?updatedAt=1753158244383", text: "Masala" },
     { img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Original-style-bg.webp?updatedAt=1753158661005", text: "Original" },
     { img: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/sauce-creame.webp?updatedAt=1753158660754", text: "Sauce" },
@@ -44,7 +44,6 @@ const Category = () => {
     return () => lenis.destroy();
   }, []);
 
-  // Scroll-based chip animation
   useEffect(() => {
     function handleScroll() {
       if (!sectionRef.current) return;
@@ -86,20 +85,20 @@ const Category = () => {
       ))}
 
       <h1
-      
+
         className="text-center text-4xl sm:text-5xl md:text-6xl font-[Helvetica] font-medium tracking-tight"
       >
         View Our <motion.span
-  className="text-green-500 inline-block"
-  animate={{ x: [0, 16, 0] }} // 1rem = 16px
-  transition={{
-    duration: 1.5,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
->
-  BEST
-</motion.span> Sellers
+          className="text-green-500 inline-block"
+          animate={{ x: [0, 16, 0] }} // 1rem = 16px
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          BEST
+        </motion.span> Sellers
       </h1>
       <motion.div
         className="category-container"

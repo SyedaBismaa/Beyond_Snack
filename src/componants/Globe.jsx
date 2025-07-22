@@ -24,10 +24,7 @@ const Globe = ({ rotationRef }) => {
 
     const geometry = new THREE.SphereGeometry(1, 28, 28);
     const material = new THREE.MeshPhongMaterial({
-      // color: 0xFEDD4B, // Tailwind gray-800
       color: 0xF5EEDC,
- 
-
       wireframe: true,
       transparent: true,
       opacity: 0.7,

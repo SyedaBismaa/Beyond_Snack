@@ -11,16 +11,16 @@ import Process from "./pages/process"
 function App() {
 
   return (
-  <div className=" h-full w-full  p-5">
-    <Navbar/>
-    <Home/>
-    <Category/>
-    <Products/>
-     <Process/>
-    <About/>
-    <ReachUs/>
-    <Footer/>
-  </div>
+    <div className=" h-full w-full  p-5">
+      <Navbar />
+      <Home />
+      <Category />
+      <Products />
+      <Process />
+      <About />
+      <ReachUs />
+      <Footer />
+    </div>
   )
 }
 

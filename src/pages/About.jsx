@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Lenis from "@studio-freight/lenis";
-import Globe from "../componants/Globe"; 
+import Globe from "../componants/Globe";
 import { motion } from "framer-motion";
-import "./about.css"; 
+import "./about.css";
 
 console.log(motion)
 
@@ -72,7 +72,7 @@ const About = () => {
       <div className="about-wrapper max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 relative">
 
         <div className=" about-globe relative w-full md:w-[500px] h-[300px] md:h-[500px] z-10">
-          {/* Globe Canvas */}
+
           <div className="absolute inset-0 z-10">
             <Globe rotationRef={globeRef} />
           </div>
@@ -90,13 +90,13 @@ const About = () => {
           </h2>
           <p
             ref={textRef}
-            className=" about-p text-base leading-relaxed text-justify whitespace-pre-wrap"
+            className=" about-p text-base leading-relaxed text-justify  word-break:break-word whitespace-pre-wrap"
           >
             {typedText}
           </p>
         </motion.div>
 
-        {/* Floating Images */}
+
         <motion.div className=" about-imgs absolute inset-0 pointer-events-none z-20">
           {images.map((img, i) => (
             <motion.img

@@ -53,7 +53,7 @@ const products = [
 
 const fallingImages = [
   { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Onion.png?updatedAt=1753170613302", top: "20%", left: "80%" },
-  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/bananan.png?updatedAt=1753170608612", top: "58%", left: "5%" },
+  { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Onion.png?updatedAt=1753170613302", top: "58%", left: "5%" },
   { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/coconut.png?updatedAt=1753170610787", top: "75%", left: "70%" },
   { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Onion.png?updatedAt=1753170613302", top: "85%", left: "20%" },
   { src: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/Black-paper.png?updatedAt=1753170610741", top: "40%", left: "35%" },

@@ -1,4 +1,3 @@
-
 .texts {
   display: flex;
   flex-direction: column;
@@ -15,10 +14,9 @@
   font-size: 0.9rem;
 }
 
-/* Responsive Styles */
-@media (max-width: 64rem) { 
+@media (max-width: 64rem) {
   .Hero-img {
-    height: 15.625rem; 
+    height: 15.625rem;
     width: 15.625rem;
     margin: 2rem auto;
   }
@@ -27,7 +25,8 @@
     height: 100%;
     width: 100%;
   }
-  .Hero-img::before{
+
+  .Hero-img::before {
     display: none;
   }
 
@@ -40,7 +39,7 @@
   }
 }
 
-@media (max-width: 48rem) { /* 768px to rem */
+@media (max-width: 48rem) {
   .text h1 {
     font-size: 2rem;
     text-align: center;
@@ -61,7 +60,7 @@
   }
 
   .Hero-img {
-    height: 12.5rem; /* 200px to rem */
+    height: 12.5rem;
     width: 12.5rem;
   }
 
@@ -71,13 +70,14 @@
   }
 }
 
-@media (max-width: 30rem) { /* 480px to rem */
+@media (max-width: 30rem) {
+
   .text {
     text-align: center;
   }
 
   .Hero-img {
-    height: 11.25rem; /* 180px to rem */
+    height: 11.25rem;
     width: 11.25rem;
   }
 

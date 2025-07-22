@@ -1,13 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+console.log(motion);
+
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-white py-12 px-4 sm:px-6 lg:px-20 mt-12 font-Helvatica">
+    <footer className="bg-gradient-to-b from-gray-900 to-black text-white py-12 px-4 sm:px-6 lg:px-20 mt-12 font-Helvatica rounded-lg">
       <div className="max-w-7xl mx-auto">
-        {/* Main Grid */}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand Info */}
+
           <motion.div
             className="space-y-4"
             whileHover={{ scale: 1.05 }}
@@ -22,7 +24,7 @@ const Footer = () => {
             </p>
           </motion.div>
 
-          {/* Navigation Links */}
+
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -31,7 +33,7 @@ const Footer = () => {
           >
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3 text-sm">
-              {["Home", "Products", "About Us", "Contact"].map((item, i) => (
+              {["Home", "Products", "About Us", "Contact"].map((item) => (
                 <motion.li
                   key={item}
                   whileHover={{ scale: 1.05, x: 5 }}
@@ -48,7 +50,7 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Contact Info */}
+
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +93,7 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          {/* Newsletter Signup */}
+
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -115,7 +117,7 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        {/* Bottom Bar */}
+
         <motion.div
           className="border-t border-gray-700 mt-12 pt-6 text-center text-sm text-gray-500"
           initial={{ opacity: 0 }}

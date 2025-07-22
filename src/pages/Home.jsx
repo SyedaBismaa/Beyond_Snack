@@ -47,6 +47,7 @@ const Home = () => {
       ref={sectionRef}
       className='h-[95%] m-5 mt-17 p-3 flex flex-wrap lg:flex-nowrap gap-20 items-center justify-center rounded-lg relative overflow-hidden font-[Helvetica]'
     >
+
       {/* Left Text Section */}
       <div className="text z-10 max-w-md">
         <motion.h1
@@ -62,8 +63,8 @@ const Home = () => {
           transition={{ duration: 1.2 }}
           className='text-lg mt-10'
         >
-          Crafted from the finest Nendran bananas, our chips bring together 
-          bold flavors, irresistible crunch, and a commitment to quality. 
+          Crafted from the finest Nendran bananas, our chips bring together
+          bold flavors, irresistible crunch, and a commitment to quality.
           Discover the real taste of Kerala — guilt-free and gluten-free.
         </motion.p>
         <motion.button
@@ -98,7 +99,7 @@ const Home = () => {
         />
       </div>
 
-      <motion.div 
+      <motion.div
         className="texts z-10 max-w-xs"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -1,17 +1,16 @@
-
 .falling-img {
   pointer-events: none;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.12));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.12));
   transition: opacity 0.7s, transform 0.7s;
   will-change: opacity, transform;
 }
 
 .products-section {
-  /* background: #6b2d2d; */
   padding: 2rem 1rem;
   text-align: center;
   transition: background 0.3s;
 }
+
 .dark .products-section {
   background: #000;
 }
@@ -24,8 +23,8 @@
   width: 100%;
   max-width: 70rem;
   padding-bottom: 4rem;
-  min-height: 30rem;      /* Added for minimum slider height */
-  height: 420px;          /* Set a fixed height for the slider */
+  min-height: 30rem;
+  height: 420px;
 }
 
 .swiper-slide {
@@ -33,7 +32,7 @@
   justify-content: center;
   align-items: flex-start;
   background: transparent;
-  min-height: 380px;      
+  min-height: 380px;
   height: 420px;
   margin-top: 2rem;
   border-radius: 1rem;
@@ -43,8 +42,8 @@
 .product-slide {
   position: relative;
   width: 300px;
-  min-height: 380px;      /* Adjusted for a more compact card */
-  height: 400px;          /* Fixed height for uniformity */
+  min-height: 380px;
+  height: 400px;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 1.5rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
@@ -56,6 +55,7 @@
   justify-content: flex-end;
 
 }
+
 .dark .product-slide {
   background: #18181b;
   color: #fff;
@@ -63,14 +63,14 @@
 
 .product-img-wrapper {
   position: absolute;
-  top: 2px; /* Slightly raised but not too high */
+  top: 2px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  width: 160px; /* Keeps a consistent circular shape */
+  width: 160px;
   height: 160px;
   border-radius: 50%;
-  background: #fff; /* Background circle */
+  background: #fff;
   border: 2px solid #facc15;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   display: flex;
@@ -85,14 +85,14 @@
   border-radius: 50%;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
+
 .product-img:hover {
   transform: scale(1.08);
-  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); */
 }
 
 .swiper-slide-active .product-img {
-  transform: scale(1.49); /* Slight pop, doesn't exceed wrapper too much */
- 
+  transform: scale(1.49);
+
 }
 
 
@@ -100,19 +100,23 @@
   margin-top: 100px;
   text-align: center;
 }
+
 .product-name {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
+
 .product-desc {
   font-size: 1rem;
   color: #666;
   margin-bottom: 0.5rem;
 }
+
 .dark .product-desc {
   color: #ccc;
 }
+
 .product-price {
   font-size: 1.1rem;
   font-weight: 600;
@@ -131,6 +135,7 @@
   cursor: pointer;
   transition: background 0.2s ease;
 }
+
 .product-btn:hover {
   background: #2eb622;
 }

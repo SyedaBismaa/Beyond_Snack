@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <nav className="w-full font-helvetica  transition-all duration-300 hover:shadow-xl rounded-full">
       <div className="max-w-7xl mx-auto flex items-center justify-between sm:px-6 lg:px-8 py-4">
-        {/* Logo */}
+
         <motion.img
           className="w-20 object-cover rounded-full"
           src="Logo.png"
@@ -73,7 +73,6 @@ const Navbar = () => {
           </svg>
         </motion.button>
 
-        {/* Desktop Nav Links */}
         <ul className="hidden sm:flex sm:gap-10 text-lg font-medium">
           {[
             { to: "/Home", text: "Home", delay: 0 },
@@ -86,10 +85,9 @@ const Navbar = () => {
               key={to}
               to={to}
               className={({ isActive }) =>
-                `${navItemStyle} ${
-                  isActive
-                    ? "text-lime-500"
-                    : "hover:text-lime-500 hover:border-b border-lime-400"
+                `${navItemStyle} ${isActive
+                  ? "text-lime-500"
+                  : "hover:text-lime-500 hover:border-b border-lime-400"
                 }`
               }
               onClick={() => setIsMenuOpen(false)}
@@ -107,7 +105,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Theme Toggle */}
         <motion.button
           onClick={toggleTheme}
           className="hidden sm:block px-4 py-2 rounded-full shadow-md transition-all duration-300"
@@ -121,11 +118,9 @@ const Navbar = () => {
         </motion.button>
       </div>
 
-      {/* Mobile Menu */}
       <motion.div
-        className={`sm:hidden absolute top-16 right-0 w-3/4 max-w-xs z-50 shadow-2xl ${
-          isMenuOpen ? "block" : "hidden"
-        }`}
+        className={`sm:hidden absolute top-16 right-0 w-3/4 max-w-xs z-50 shadow-2xl ${isMenuOpen ? "block" : "hidden"
+          }`}
         initial={{ x: "100%", opacity: 0 }}
         animate={isMenuOpen ? { x: 0, opacity: 1 } : { x: "100%", opacity: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 15 }}

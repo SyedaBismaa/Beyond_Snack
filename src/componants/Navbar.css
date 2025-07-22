@@ -1,5 +1,3 @@
-
-
 @layer components {
   .nav-container {
     @apply w-full shadow-md rounded-full bg-white dark:bg-gray-900;

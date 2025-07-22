@@ -29,7 +29,6 @@ const icons = [
     hoverImg: "https://ik.imagekit.io/syedabismah/BeyondSnacksImages/crispy.png",
   },
 ];
-
 const Process = () => {
   const [hoverIndex, setHoverIndex] = useState(null);
 
@@ -54,7 +53,6 @@ const Process = () => {
         <span className="text-yellow-500 font-bold">Delicious</span>
       </motion.h2>
 
-      {/* Icon Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 max-w-6xl mx-auto">
         {icons.map((item, idx) => (
           <motion.div
@@ -79,6 +77,7 @@ const Process = () => {
           </motion.div>
         ))}
       </div>
+      
     </section>
   );
 };

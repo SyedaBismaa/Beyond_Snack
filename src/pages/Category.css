@@ -1,102 +1,99 @@
 .category-wrapper {
-      height: 90vh;
-      margin-top: 7rem; /* mt-16 */
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  height: 90vh;
+  margin-top: 7rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .category-heading {
-      font-size: 2.25rem; /* text-4xl */
-      font-weight: 500; /* font-extrabold */
-      display: flex;
-      justify-content: center;
-      padding-top: 2rem; /* pt-8 */
+.category-heading {
+  font-size: 2.25rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
 
-    }
+.highlight {
+  padding: 0 0.75rem;
+  color: yellow;
+}
 
-    .highlight {
-      padding: 0 0.75rem; /* px-3 */
-      color: yellow;
-    }
+.category-container {
+  height: 70%;
+  width: 90%;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  perspective: 1000px;
+}
 
-    .category-container {
-      height: 70%;
-      width: 90%;
-      margin: 2rem; /* m-8 */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1.5rem; /* gap-6 */
-      padding: 1rem; /* p-4 */
-      border-radius: 1rem; /* rounded-2xl */
-      perspective: 1000px;
-    }
+.category-item {
+  height: 90%;
+  width: 20%;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.4s ease, transform 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
-    .category-item {
-      height: 90%;
-      width: 20%;
-      background-color: #fff; 
-      border-radius: 1.5rem; 
-      overflow: hidden;
-      position: relative;
-      transition: width 0.4s ease, transform 0.4s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
+.category-item:hover {
+  width: 30%;
+  transform: translateZ(50px) scale(1.05);
+  z-index: 10;
+}
 
-    .category-item:hover {
-      width: 30%;
-      transform: translateZ(50px) scale(1.05);
-      z-index: 10;
-    }
+.category-item:not(:hover) {
+  width: 15%;
+}
 
-    .category-item:not(:hover) {
-      width: 15%;
-    }
+.category-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
 
-    .category-img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      border-radius: 1rem; /* rounded-xl */
-      transition: transform 0.4s ease, filter 0.4s ease;
-    }
+.category-item:hover .category-img {
+  transform: scale(1.1) translateZ(20px);
+  filter: brightness(1.1);
+}
 
-    .category-item:hover .category-img {
-      transform: scale(1.1) translateZ(20px);
-      filter: brightness(1.1);
-    }
+.category-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  padding: 0;
+  border-radius: 0;
+  background: none !important;
+  box-shadow: none;
+  pointer-events: none;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
 
-    .category-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #fff;
-      text-align: center;
-      opacity: 0;
-      transform: translate(-50%, -50%);
-      transition: opacity 0.4s ease, transform 0.4s ease;
-      padding: 0;
-      border-radius: 0;
-      background: none !important;
-      box-shadow: none;
-      pointer-events: none;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    }
-
-    .category-item:hover .category-text {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1.08);
-    }
-
-    /* Remove color backgrounds for text on hover */
-    .category-item .category-text {
-      background: none !important;
-    }
+.category-item:hover .category-text {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+.category-item .category-text {
+  background: none !important;
+}

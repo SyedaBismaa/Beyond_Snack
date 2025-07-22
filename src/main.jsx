@@ -4,7 +4,6 @@ import App from './App.jsx';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 
-// Theme context
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
