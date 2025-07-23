@@ -46,7 +46,7 @@ const About = () => {
             setTypedText(fullText.slice(0, i));
             i++;
             if (i > fullText.length) clearInterval(interval);
-          }, 20);
+          }, 30);
         }
       },
       { threshold: 0.3 }

@@ -1,13 +1,14 @@
 // Products.jsx
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { motion, useAnimation } from 'motion/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './Products.css';
-import { motion, useAnimation } from 'motion/react';
+
 
 console.log(motion)
 
@@ -104,6 +105,18 @@ const Products = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [controlsArray]);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth <= 896);
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
   return (
     <div className="products-section relative" ref={sectionRef}>
       {/* Falling images randomly arranged */}
@@ -117,7 +130,7 @@ const Products = () => {
             position: "absolute",
             top: img.top,
             left: img.left,
-            width: "70px",
+            width: isMobile ? "40px" : "70px", 
             zIndex: 1,
             opacity: 0.8,
             userSelect: "none"
@@ -127,20 +140,21 @@ const Products = () => {
           initial="initial"
           animate={controlsArray[i]}
         />
+
       ))}
 
-  <h1 className="products-title text-5xl mb-[1.5rem] font-medium "> Check Out All The{" "}
-<motion.span
-  className="text-red-500 inline-block"
-  animate={{ x: [0, 16, 0] }} // 1rem = 16px
-  transition={{
-    duration: 1.5,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
->
-  Flavoures
-</motion.span></h1>
+      <h1 className="products-title text-5xl mb-[1.5rem] font-medium "> Check Out All The{" "}
+        <motion.span
+          className="text-red-500 inline-block"
+          animate={{ x: [0, 16, 0] }} // 1rem = 16px
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          Flavoures
+        </motion.span></h1>
       <p className='mb-10 text-xl  '> Discover bold, tasty, and irresistibly crunchy banana chips that pack a punch in every bite. Made to snack, made to share..</p>
       <Swiper
         effect="coverflow"
