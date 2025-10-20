@@ -1,27 +1,27 @@
-import Footer from "./componants/Footer"
-import Navbar from "./componants/Navbar"
-import About from "./pages/About"
-import Category from "./pages/Category"
-import Home from "./pages/Home"
-import Products from "./pages/Products"
-import ReachUs from "./pages/ReachUs"
-import Process from "./pages/Process"
+// App.jsx
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./componants/Navbar";
+import Home from "./pages/Home";
+import Category from "./pages/Category";
+import About from "./pages/About";
+import Contact from "./pages/ReachUs";
+import Product from "./pages/Product";
 
 
-function App() {
-
+const App = () => {
   return (
-    <div className=" h-full w-full  p-5">
+    <>
       <Navbar />
-      <Home />
-      <Category />
-      <Products />
-      <Process />
-      <About />
-      <ReachUs />
-      <Footer />
-    </div>
-  )
-}
+      <Routes>
+        <Route path="/Home" element={<Home />} />
+        <Route path="/Category" element={<Category />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Product />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </>
+  );
+};
 
-export default App
+export default App;

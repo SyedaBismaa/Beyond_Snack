@@ -86,7 +86,7 @@ const About = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <h2 className=" about-h1 text-3xl md:text-4xl font-bold mb-6 font-Helvatica">
-            About<span className="text-green-500">Beyond</span> Snack
+            About<span className="text-green-500 ml-2">Beyond</span> Snack
           </h2>
           <p
             ref={textRef}
