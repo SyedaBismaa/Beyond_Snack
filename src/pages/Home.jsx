@@ -59,7 +59,7 @@ const Home = () => {
       {/* Hero Section */}
       <section
         ref={sectionRef}
-        className="min-h-[90vh] flex flex-col lg:flex-row items-center justify-center gap-16 px-8 py-12"
+        className="min-h-[80vh] flex flex-col lg:flex-row items-center justify-center gap-22 px-8 py-12"
       >
         {/* Left Text Section */}
         <div className="max-w-md z-10 text-center lg:text-left">

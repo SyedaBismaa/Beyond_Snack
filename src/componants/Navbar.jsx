@@ -130,8 +130,8 @@ const Navbar = () => {
             { to: "/Home", text: "Home", delay: 0 },
             { to: "/Category", text: "Category", delay: 0.1 },
             { to: "/about", text: "About", delay: 0.2 },
-            { to: "/contact", text: "Contact", delay: 0.3 },
-            { to: "/cart", text: "Favs", delay: 0.4 },
+            { to: "/products", text: "Products", delay: 0.3 },
+            { to: "/contact", text: "Conatact", delay: 0.4 },
           ].map(({ to, text, delay }) => (
             <NavLink
               key={to}

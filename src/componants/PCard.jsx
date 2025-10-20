@@ -1,13 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const PCard = () => {
-  const product = {
-    img: "https://i.pinimg.com/736x/2f/72/36/2f7236123171c8458003aa490b7e439a.jpg",
-    flavor: "Peri Peri Banana Chips",
-    price: "₹120",
-  };
-
+const PCard = (props) => {
+ 
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
@@ -16,8 +11,7 @@ const PCard = () => {
     >
       {/* Product Image */}
       <motion.img
-        src={product.img}
-        alt={product.flavor}
+        src={props.img}
         className="rounded-xl object-cover h-48 w-full mb-4"
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.4 }}
@@ -25,19 +19,19 @@ const PCard = () => {
 
       {/* Flavor & Price */}
       <div className="text-center">
-        <h2 className="text-xl font-semibold text-gray-800">
-          {product.flavor}
+        <h2 className="text-xl font-semibold">
+          {props.name}
         </h2>
-        <p className="text-lg text-lime-600 font-bold mt-1">{product.price}</p>
+        <p className="text-lg text-lime-600 font-bold mt-1">{props.price}</p>
       </div>
 
       {/* Buttons */}
       <div className="flex gap-4 mt-5">
         <motion.button
+          
           whileHover={{
             scale: 1.1,
             backgroundColor: "#84cc16",
-            color: "#fff",
           }}
           whileTap={{ scale: 0.95 }}
           className="px-4 py-2 border border-lime-400 rounded-full font-medium transition-all duration-300"
@@ -49,7 +43,6 @@ const PCard = () => {
           whileHover={{
             scale: 1.1,
             backgroundColor: "#facc15",
-            color: "#000",
           }}
           whileTap={{ scale: 0.95 }}
           className="px-4 py-2 border border-yellow-400 rounded-full font-medium transition-all duration-300"

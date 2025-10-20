@@ -58,6 +58,7 @@ const ReachUs = () => {
       <div className="absolute bottom-[38%] sm:bottom-[33%] md:bottom-[31%] w-full">
         <MarqueeRow direction="right" />
       </div>
+
     </div>
   );
 };
