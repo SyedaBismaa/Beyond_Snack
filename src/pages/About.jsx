@@ -15,7 +15,7 @@ const About = () => {
   
   Our golden Nendran bananas are sourced from the sun-kissed farms of Kerala and processed with zero human contact—ensuring hygiene and top quality.
   
-  At Beyond Snack, we’re on a mission to replace boring snacks with crunchy, flavor-packed banana chips. From classic salted to spicy masala, each chip is crafted with care to deliver the ultimate snacking joy. 🏆`;
+  At Beyond Snack, we’re on a mission to replace boring snacks with crunchy, tasty, flavor-packed banana chips. From classic salted to spicy masala, each chip is crafted with care to deliver the ultimate snacking joy. 🏆`;
 
 
   useEffect(() => {
